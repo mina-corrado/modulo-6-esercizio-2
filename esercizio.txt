@@ -1,0 +1,83 @@
+/* Strive Blog API
+
+Sei responsabile della creazione di una serie di WebAPI per l'applicazione Strive Blog.
+
+Usando il Frontend fornito in allegato come base di partenza per questo progetto svolgi i seguenti compiti.
+
+
+
+In questo secondo step andrai a sviluppare le funzionalità di lettura, creazione, modifica, cancellazione dei blog post.
+
+
+
+Il blog posts dovrà contenere le seguenti informazioni:
+
+
+{	
+"_id": "ID SERVER GENERATED",
+"category": "CATEGORIA ARTICOLO",
+"title": "TITOLO ARTICOLO",
+"cover":"COVER ARTICOLO (LINK IMMAGINE)",
+"readTime": {
+	"value": 2,
+  "unit": "minuti"
+ },
+"author": {
+    "name": "NOME AVATAR AUTORE",
+    "avatar":"LINK AVATAR AUTORE"
+    },
+ "content":"HTML"
+}
+
+
+
+## BACKEND
+
+
+
+Il backend dovrà contenere le seguenti rotte:
+
+
+
+GET /blogPosts => ritorna una lista di blog post
+GET /blogPosts /123 => ritorna un singolo blog post
+POST /blogPosts => crea un nuovo blog post
+PUT /blogPosts /123 => modifica il blog post con l'id associato
+DELETE /blogPosts /123 => cancella il blog post con l'id associato
+
+
+
+La persistenza dei dati dev'essere garantita dall'uso di MongoDB
+
+
+
+NOTA: Ricorda di installare il pacchetto 'cors' con 'npm i cors', e di usarlo con 'server.use(cors())'
+
+
+
+
+
+⚠️ le query e i body dovranno essere validati
+
+⚠️ I necessari error handlers dovranno essere aggiunti e usati correttamente
+
+
+
+## FRONTEND
+
+
+
+Fare il POST di un articolo dal form di aggiunta articolo
+Fare il fetch degli articoli presenti nel database e visualizzarli nella homepage
+
+
+
+
+
+## EXTRA
+
+GET /authors/:id/blogPosts/ => ricevi tutti i blog post di uno specifico autore dal corrispondente ID 
+GET /blogPosts?title=whatever => filtra i blog post e ricevi l'unico che corrisponda alla condizione di ricerca (es.: titolo contiene "whatever")
+Aggiungi la funzionalità di ricerca dei post nel frontend
+
+*/
